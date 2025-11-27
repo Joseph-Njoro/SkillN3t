@@ -1,0 +1,14 @@
+{
+  "name": "@skillnet/backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start:dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "start": "node dist/main.js",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint \"src/**/*.{ts,js}\" --fix",
+    "seed": "ts-node -r tsconfig-paths/register scripts/seed.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

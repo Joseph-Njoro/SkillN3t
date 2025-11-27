@@ -1,0 +1,16 @@
+{
+  "name": "skillnet",
+  "private": true,
+  "version": "0.0.0",
+  "description": "SkillNet monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "pnpm install",
+    "postinstall": "pnpm -w -r run prepare || true",
+    "prepare": "husky install || true"
+  },
+  "devDependencies": {}
+}
