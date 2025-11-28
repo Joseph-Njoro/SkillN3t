@@ -14,3 +14,14 @@ This repo contains:
 3. Bootstrap workspace: `pnpm install` (or `npm i -g pnpm && pnpm install`)
 4. Initialize backend & frontend scaffolds (see docs in docs/BOOTSTRAP.md)
 
+# Terminal B: start backend (after Nest scaffold + install)
+cd skillnet/apps/backend
+pnpm run start:dev
+
+# Terminal C: start frontend
+cd skillnet/apps/frontend
+pnpm run dev
+
+# Monorepo-wide prepare (Husky, lint-staged):
+pnpm -w run prepare
+

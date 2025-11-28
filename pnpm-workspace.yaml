@@ -1,0 +1,5 @@
+# tells pnpm that everything inside apps/ and packages/ is part of the workspace.
+
+packages:
+  - 'apps/*'
+  - 'packages/*'

@@ -3,14 +3,29 @@
   "private": true,
   "version": "0.0.0",
   "description": "SkillNet monorepo",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
+    "dev": "pnpm --parallel run start:dev --filter ./apps/*",
     "bootstrap": "pnpm install",
     "postinstall": "pnpm -w -r run prepare || true",
-    "prepare": "husky install || true"
+    "prepare": "husky install",
+    "lint": "pnpm -r run lint",
+    "format": "pnpm -r run format"
   },
-  "devDependencies": {}
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.0",
+    "typescript": "^5.9.3",
+    "ts-node-dev": "^2.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,css,scss,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
 }
