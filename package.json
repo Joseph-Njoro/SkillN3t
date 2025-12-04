@@ -9,14 +9,16 @@
     "postinstall": "pnpm -w -r run prepare || true",
     "prepare": "husky install",
     "lint": "pnpm -r run lint",
-    "format": "pnpm -r run format"
+    "format": "pnpm -r run format",
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "devDependencies": {
     "eslint": "^9.39.1",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.0",
     "typescript": "^5.9.3",
@@ -25,7 +27,8 @@
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,css,scss,md}": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix",
+      "git add"
     ]
   }
 }

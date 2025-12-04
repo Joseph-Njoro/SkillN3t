@@ -1,6 +1,6 @@
 {
   "name": "@skillnet/shared",
-  "version": "0.0.0",
-  "private": true,
-  "main": "index.ts"
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "private": true
 }
